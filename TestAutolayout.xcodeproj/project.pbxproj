@@ -16,6 +16,17 @@
 		79F0F84A1BFF07620054D7B3 /* TestAutolayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0F8491BFF07610054D7B3 /* TestAutolayoutTests.swift */; };
 		79F0F8551BFF07620054D7B3 /* TestAutolayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0F8541BFF07620054D7B3 /* TestAutolayoutUITests.swift */; };
 		79F0F8651BFF3BE50054D7B3 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0F8641BFF3BE50054D7B3 /* OptionsVC.swift */; settings = {ASSET_TAGS = (); }; };
+		79F881591C02FC10006DB84A /* PUJobListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F881581C02FC10006DB84A /* PUJobListVC.swift */; settings = {ASSET_TAGS = (); }; };
+		79F881621C02FD0F006DB84A /* FlexibleHeightBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8815B1C02FD0F006DB84A /* FlexibleHeightBar.swift */; settings = {ASSET_TAGS = (); }; };
+		79F881631C02FD0F006DB84A /* FlexibleHeightBarBehaviorDefiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8815C1C02FD0F006DB84A /* FlexibleHeightBarBehaviorDefiner.swift */; settings = {ASSET_TAGS = (); }; };
+		79F881641C02FD0F006DB84A /* FlexibleHeightBarSubviewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8815E1C02FD0F006DB84A /* FlexibleHeightBarSubviewLayoutAttributes.swift */; settings = {ASSET_TAGS = (); }; };
+		79F881651C02FD0F006DB84A /* SquareCashBarBehaviorDefiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8815F1C02FD0F006DB84A /* SquareCashBarBehaviorDefiner.swift */; settings = {ASSET_TAGS = (); }; };
+		79F881661C02FD0F006DB84A /* SquareCashFlexibleHeightBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F881601C02FD0F006DB84A /* SquareCashFlexibleHeightBar.swift */; settings = {ASSET_TAGS = (); }; };
+		79F881671C02FD0F006DB84A /* SquareCashFlexibleHeightBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F881611C02FD0F006DB84A /* SquareCashFlexibleHeightBar.xib */; settings = {ASSET_TAGS = (); }; };
+		79F881691C030A75006DB84A /* PUAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F881681C030A75006DB84A /* PUAppConstants.swift */; settings = {ASSET_TAGS = (); }; };
+		79F8816E1C030B42006DB84A /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79F8816B1C030B42006DB84A /* Roboto-Light.ttf */; settings = {ASSET_TAGS = (); }; };
+		79F8816F1C030B42006DB84A /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79F8816C1C030B42006DB84A /* Roboto-Medium.ttf */; settings = {ASSET_TAGS = (); }; };
+		79F881701C030B42006DB84A /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79F8816D1C030B42006DB84A /* Roboto-Regular.ttf */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +62,17 @@
 		79F0F8541BFF07620054D7B3 /* TestAutolayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAutolayoutUITests.swift; sourceTree = "<group>"; };
 		79F0F8561BFF07620054D7B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F0F8641BFF3BE50054D7B3 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
+		79F881581C02FC10006DB84A /* PUJobListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PUJobListVC.swift; sourceTree = "<group>"; };
+		79F8815B1C02FD0F006DB84A /* FlexibleHeightBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleHeightBar.swift; sourceTree = "<group>"; };
+		79F8815C1C02FD0F006DB84A /* FlexibleHeightBarBehaviorDefiner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleHeightBarBehaviorDefiner.swift; sourceTree = "<group>"; };
+		79F8815E1C02FD0F006DB84A /* FlexibleHeightBarSubviewLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleHeightBarSubviewLayoutAttributes.swift; sourceTree = "<group>"; };
+		79F8815F1C02FD0F006DB84A /* SquareCashBarBehaviorDefiner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareCashBarBehaviorDefiner.swift; sourceTree = "<group>"; };
+		79F881601C02FD0F006DB84A /* SquareCashFlexibleHeightBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareCashFlexibleHeightBar.swift; sourceTree = "<group>"; };
+		79F881611C02FD0F006DB84A /* SquareCashFlexibleHeightBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SquareCashFlexibleHeightBar.xib; sourceTree = "<group>"; };
+		79F881681C030A75006DB84A /* PUAppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PUAppConstants.swift; sourceTree = "<group>"; };
+		79F8816B1C030B42006DB84A /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		79F8816C1C030B42006DB84A /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		79F8816D1C030B42006DB84A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +123,12 @@
 		79F0F8301BFF07610054D7B3 /* TestAutolayout */ = {
 			isa = PBXGroup;
 			children = (
+				79F8816A1C030B42006DB84A /* Fonts */,
+				79F881681C030A75006DB84A /* PUAppConstants.swift */,
+				79F8815A1C02FD0F006DB84A /* FlexibleHeightBar */,
 				79F0F8311BFF07610054D7B3 /* AppDelegate.swift */,
 				79F0F8331BFF07610054D7B3 /* ViewController.swift */,
+				79F881581C02FC10006DB84A /* PUJobListVC.swift */,
 				79F0F8641BFF3BE50054D7B3 /* OptionsVC.swift */,
 				79F0F8351BFF07610054D7B3 /* Main.storyboard */,
 				79F0F83B1BFF07610054D7B3 /* Assets.xcassets */,
@@ -129,6 +155,37 @@
 				79F0F8561BFF07620054D7B3 /* Info.plist */,
 			);
 			path = TestAutolayoutUITests;
+			sourceTree = "<group>";
+		};
+		79F8815A1C02FD0F006DB84A /* FlexibleHeightBar */ = {
+			isa = PBXGroup;
+			children = (
+				79F8815B1C02FD0F006DB84A /* FlexibleHeightBar.swift */,
+				79F8815C1C02FD0F006DB84A /* FlexibleHeightBarBehaviorDefiner.swift */,
+				79F8815D1C02FD0F006DB84A /* FlexibleHeightBarDemo */,
+				79F8815E1C02FD0F006DB84A /* FlexibleHeightBarSubviewLayoutAttributes.swift */,
+				79F8815F1C02FD0F006DB84A /* SquareCashBarBehaviorDefiner.swift */,
+				79F881601C02FD0F006DB84A /* SquareCashFlexibleHeightBar.swift */,
+				79F881611C02FD0F006DB84A /* SquareCashFlexibleHeightBar.xib */,
+			);
+			path = FlexibleHeightBar;
+			sourceTree = "<group>";
+		};
+		79F8815D1C02FD0F006DB84A /* FlexibleHeightBarDemo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FlexibleHeightBarDemo;
+			sourceTree = "<group>";
+		};
+		79F8816A1C030B42006DB84A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				79F8816B1C030B42006DB84A /* Roboto-Light.ttf */,
+				79F8816C1C030B42006DB84A /* Roboto-Medium.ttf */,
+				79F8816D1C030B42006DB84A /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F0F83F1BFF07610054D7B3 /* LaunchScreen.storyboard in Resources */,
+				79F881701C030B42006DB84A /* Roboto-Regular.ttf in Resources */,
+				79F881671C02FD0F006DB84A /* SquareCashFlexibleHeightBar.xib in Resources */,
+				79F8816F1C030B42006DB84A /* Roboto-Medium.ttf in Resources */,
+				79F8816E1C030B42006DB84A /* Roboto-Light.ttf in Resources */,
 				79F0F83C1BFF07610054D7B3 /* Assets.xcassets in Resources */,
 				79F0F8371BFF07610054D7B3 /* Main.storyboard in Resources */,
 			);
@@ -261,10 +322,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F881631C02FD0F006DB84A /* FlexibleHeightBarBehaviorDefiner.swift in Sources */,
 				79F0F8341BFF07610054D7B3 /* ViewController.swift in Sources */,
+				79F881621C02FD0F006DB84A /* FlexibleHeightBar.swift in Sources */,
 				79F0F83A1BFF07610054D7B3 /* TestAutolayout.xcdatamodeld in Sources */,
+				79F881641C02FD0F006DB84A /* FlexibleHeightBarSubviewLayoutAttributes.swift in Sources */,
+				79F881591C02FC10006DB84A /* PUJobListVC.swift in Sources */,
+				79F881691C030A75006DB84A /* PUAppConstants.swift in Sources */,
 				79F0F8321BFF07610054D7B3 /* AppDelegate.swift in Sources */,
 				79F0F8651BFF3BE50054D7B3 /* OptionsVC.swift in Sources */,
+				79F881651C02FD0F006DB84A /* SquareCashBarBehaviorDefiner.swift in Sources */,
+				79F881661C02FD0F006DB84A /* SquareCashFlexibleHeightBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +557,7 @@
 				79F0F85B1BFF07620054D7B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79F0F85C1BFF07620054D7B3 /* Build configuration list for PBXNativeTarget "TestAutolayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +566,7 @@
 				79F0F85E1BFF07620054D7B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79F0F85F1BFF07620054D7B3 /* Build configuration list for PBXNativeTarget "TestAutolayoutUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +575,7 @@
 				79F0F8611BFF07620054D7B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     func keyboardWillHide(notification: NSNotification) {
         var info = notification.userInfo!
-        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let _ : CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         
         UIView.animateWithDuration(0.1, animations: { () -> Void in
             self.bottomConstraint.constant = 0.0
