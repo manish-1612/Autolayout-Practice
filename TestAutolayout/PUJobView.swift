@@ -90,27 +90,24 @@ class PUJobView: UIView {
         // ----------------------------------------------------------------
         //   image for company
         // ----------------------------------------------------------------
-        let image = UIImageView(frame: CGRectMake(50.0, 5.0, 37.0, 37.0))
-        image.image = companyImage
-        image.backgroundColor = UIColor.redColor()
-        image.layer.cornerRadius = 37.0 / 2.0
-        image.clipsToBounds = true
-        viewForBackground.addSubview(image)
+        let imageView = UIImageView()
+        imageView.image = companyImage
+        imageView.backgroundColor = UIColor.redColor()
+        imageView.layer.cornerRadius = 37.0 / 2.0
+        imageView.clipsToBounds = true
+        viewForBackground.addSubview(imageView)
         
-        image.translatesAutoresizingMaskIntoConstraints = false;
+        //imageView.translatesAutoresizingMaskIntoConstraints = false;
 
         // ----------------------------------------------------------------
         //   constraints for imageview
         // ----------------------------------------------------------------
-        self.addConstraint(NSLayoutConstraint(item: image, attribute: NSLayoutAttribute.LeadingMargin, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: 50.0))
+        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.LeadingMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: 100.0))
         
-//        self.addConstraint(NSLayoutConstraint(item: image, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.TopMargin, multiplier: 1.0, constant: 5.0))
-//        
-//        self.addConstraint(NSLayoutConstraint(item: image, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: image, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: 37.0))
-//        
-//        self.addConstraint(NSLayoutConstraint(item: image, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: image, attribute: NSLayoutAttribute.Height, multiplier: 1.0, constant: 37.0))
-//        
+        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.TopMargin, multiplier: 1.0, constant: 5.0))
         
-        print("image view frame : \(image.frame)")
+        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: imageView, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: 37.0))
+        
+        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: imageView, attribute: NSLayoutAttribute.Height, multiplier: 1.0, constant: 37.0))
     }
 }
