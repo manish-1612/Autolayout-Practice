@@ -27,6 +27,7 @@
 		79F8816E1C030B42006DB84A /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79F8816B1C030B42006DB84A /* Roboto-Light.ttf */; settings = {ASSET_TAGS = (); }; };
 		79F8816F1C030B42006DB84A /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79F8816C1C030B42006DB84A /* Roboto-Medium.ttf */; settings = {ASSET_TAGS = (); }; };
 		79F881701C030B42006DB84A /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79F8816D1C030B42006DB84A /* Roboto-Regular.ttf */; settings = {ASSET_TAGS = (); }; };
+		79F881721C031792006DB84A /* PUJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F881711C031792006DB84A /* PUJobView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		79F8816B1C030B42006DB84A /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		79F8816C1C030B42006DB84A /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		79F8816D1C030B42006DB84A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		79F881711C031792006DB84A /* PUJobView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PUJobView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +126,13 @@
 			isa = PBXGroup;
 			children = (
 				79F8816A1C030B42006DB84A /* Fonts */,
-				79F881681C030A75006DB84A /* PUAppConstants.swift */,
 				79F8815A1C02FD0F006DB84A /* FlexibleHeightBar */,
+				79F881681C030A75006DB84A /* PUAppConstants.swift */,
 				79F0F8311BFF07610054D7B3 /* AppDelegate.swift */,
 				79F0F8331BFF07610054D7B3 /* ViewController.swift */,
 				79F881581C02FC10006DB84A /* PUJobListVC.swift */,
 				79F0F8641BFF3BE50054D7B3 /* OptionsVC.swift */,
+				79F881711C031792006DB84A /* PUJobView.swift */,
 				79F0F8351BFF07610054D7B3 /* Main.storyboard */,
 				79F0F83B1BFF07610054D7B3 /* Assets.xcassets */,
 				79F0F83D1BFF07610054D7B3 /* LaunchScreen.storyboard */,
@@ -327,6 +330,7 @@
 				79F881621C02FD0F006DB84A /* FlexibleHeightBar.swift in Sources */,
 				79F0F83A1BFF07610054D7B3 /* TestAutolayout.xcdatamodeld in Sources */,
 				79F881641C02FD0F006DB84A /* FlexibleHeightBarSubviewLayoutAttributes.swift in Sources */,
+				79F881721C031792006DB84A /* PUJobView.swift in Sources */,
 				79F881591C02FC10006DB84A /* PUJobListVC.swift in Sources */,
 				79F881691C030A75006DB84A /* PUAppConstants.swift in Sources */,
 				79F0F8321BFF07610054D7B3 /* AppDelegate.swift in Sources */,

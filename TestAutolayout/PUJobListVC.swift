@@ -11,7 +11,14 @@ import UIKit
 class PUJobListVC: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
+   
     var startOrigin : CGFloat?
+    
+    @IBOutlet weak var viewForSeparatorBelowButton: UIView!
+    @IBOutlet weak var buttonToAdd: UIButton!
+    
+    var arrayForJobList = [AnyObject]()
+    
     
     // MARK: - Constants -
     struct Identifier {
@@ -24,6 +31,22 @@ class PUJobListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        let dictionaryForJob1 = ["name" : "Innofied Solutions Pvt. Ltd.", "role" : "Manager", "doj" : "Nov 2017", "image" : UIImage()]
+        let dictionaryForJob2 = ["name" : "FHCD Solution Ltd.", "role" : "Project Manager", "doj" : "Jun 2015", "image" : UIImage()]
+        let dictionaryForJob3 = ["name" : "My Apps Ltd.", "role" : "Team Leader", "doj" : "Jul 2015", "image" : UIImage()]
+        let dictionaryForJob4 = ["name" : "King Soft", "role" : "Software Engineer", "doj" : "Apr 2014", "image" : UIImage()]
+        let dictionaryForJob5 = ["name" : "ABC software Solution Pvt. Ltd.", "role" : "Junior Developer", "doj" : "Jan 2013", "image" : UIImage()]
+        let dictionaryForJob6 = ["name" : "Deel Software Solution", "role" : "Trainee", "doj" : "May 2012", "image" : UIImage()]
+
+        arrayForJobList.append(dictionaryForJob1)
+        arrayForJobList.append(dictionaryForJob2)
+        arrayForJobList.append(dictionaryForJob3)
+        arrayForJobList.append(dictionaryForJob4)
+        arrayForJobList.append(dictionaryForJob5)
+        arrayForJobList.append(dictionaryForJob6)
+
         
         
         createHeaderView()
@@ -72,8 +95,35 @@ class PUJobListVC: UIViewController {
         self.view.addSubview(myCustomBar)
         myCustomBar.behaviorDefiner = SquareCashBarBehaviorDefiner()
         self.scrollView.delegate = myCustomBar.behaviorDefiner
+        
+        createViewForJobList()
     }
 
+    
+    func createViewForJobList(){
+        
+        print("button : \(buttonToAdd.frame)")
+        print("view : \(viewForSeparatorBelowButton.frame)")
+        
+        var arrayForOrigin = [CGFloat]()
+        arrayForOrigin.append(buttonToAdd.frame.origin.y + buttonToAdd.frame.size.height + 22.0)
+        
+        for i in 0..<arrayForJobList.count{
+            
+            
+            let job = arrayForJobList[i]
+            
+            let viewForJob = PUJobView(frame: CGRectMake(0.0, arrayForOrigin[i], self.view.frame.size.width, 50.0), role: (job["role"] as? String)!, company: (job["name"] as? String)!, date: (job["doj"] as? String)!, image: (job["image"] as? UIImage)!)
+            viewForJob.backgroundColor = UIColor.whiteColor()
+            scrollView.addSubview(viewForJob)
+            
+            arrayForOrigin.append(viewForJob.frame.origin.y + viewForJob.frame.size.height + 33.0)
+            
+            
+            scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, viewForJob.frame.origin.y + viewForJob.frame.size.height + 33.0)
+        }
+        
+    }
     
     override func viewWillAppear(animated: Bool) {
         //do as per your desire
