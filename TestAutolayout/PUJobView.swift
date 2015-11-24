@@ -36,10 +36,10 @@ class PUJobView: UIView {
         // ----------------------------------------------------------------
         let labelForMonth = UILabel()
         labelForMonth.textAlignment = NSTextAlignment.Right
-        labelForMonth.textColor = UIColor.blackColor()
+        labelForMonth.textColor = UIColor(red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, alpha: 1.0)
         labelForMonth.font = UIFont(name: AppConstants.RobotoLightFont, size: 12)
         labelForMonth.text = doj.substringToIndex(3)
-        labelForMonth.backgroundColor = UIColor.blueColor()
+        labelForMonth.backgroundColor = UIColor.redColor()
         viewForBackground.addSubview(labelForMonth)
         
         labelForMonth.translatesAutoresizingMaskIntoConstraints = false;
@@ -47,10 +47,10 @@ class PUJobView: UIView {
         // ----------------------------------------------------------------
         //   constraints for month label
         // ----------------------------------------------------------------
-        self.addConstraint(NSLayoutConstraint(item: labelForMonth, attribute: NSLayoutAttribute.LeadingMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: 10.0))
+        self.addConstraint(NSLayoutConstraint(item: labelForMonth, attribute: NSLayoutAttribute.LeadingMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: 15.0))
         
         
-        self.addConstraint(NSLayoutConstraint(item: labelForMonth, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.TopMargin, multiplier: 1.0, constant: 9.0))
+        self.addConstraint(NSLayoutConstraint(item: labelForMonth, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.TopMargin, multiplier: 1.0, constant: 10.0))
         
         
         self.addConstraint(NSLayoutConstraint(item: labelForMonth, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: labelForMonth, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: 32.0))
@@ -64,7 +64,7 @@ class PUJobView: UIView {
         // ----------------------------------------------------------------
         let labelForYear = UILabel()
         labelForYear.textAlignment = NSTextAlignment.Right
-        labelForYear.textColor = UIColor.blackColor()
+        labelForYear.textColor = UIColor(red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, alpha: 1.0)
         labelForYear.backgroundColor = UIColor.yellowColor()
         labelForYear.font = UIFont(name: AppConstants.RobotoLightFont, size: 12)
         labelForYear.text = doj.substringFromIndex(4)
@@ -75,9 +75,9 @@ class PUJobView: UIView {
         // ----------------------------------------------------------------
         //   constraints for year label
         // ----------------------------------------------------------------
-        self.addConstraint(NSLayoutConstraint(item: labelForYear, attribute: NSLayoutAttribute.LeadingMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: 10.0))
+        self.addConstraint(NSLayoutConstraint(item: labelForYear, attribute: NSLayoutAttribute.LeadingMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: 15.0))
         
-        self.addConstraint(NSLayoutConstraint(item: labelForYear, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: labelForMonth, attribute: NSLayoutAttribute.TopMargin, multiplier: 1.0, constant: 20.0))
+        self.addConstraint(NSLayoutConstraint(item: labelForYear, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: labelForMonth, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 4.0))
         
         self.addConstraint(NSLayoutConstraint(item: labelForYear, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: labelForYear, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: 32.0))
 
@@ -86,28 +86,83 @@ class PUJobView: UIView {
         self.addConstraint(NSLayoutConstraint(item: labelForMonth, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: labelForYear, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: 0.0))
         
         
-        
         // ----------------------------------------------------------------
         //   image for company
         // ----------------------------------------------------------------
-        let imageView = UIImageView()
+        let imageView = UIImageView(frame: CGRectMake(60.0, 6.0, 37.0, 37.0))
         imageView.image = companyImage
-        imageView.backgroundColor = UIColor.redColor()
+        imageView.backgroundColor = UIColor.greenColor()
         imageView.layer.cornerRadius = 37.0 / 2.0
         imageView.clipsToBounds = true
         viewForBackground.addSubview(imageView)
         
-        //imageView.translatesAutoresizingMaskIntoConstraints = false;
+        imageView.translatesAutoresizingMaskIntoConstraints = false;
 
         // ----------------------------------------------------------------
         //   constraints for imageview
         // ----------------------------------------------------------------
-        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.LeadingMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: 100.0))
+        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: labelForYear, attribute: NSLayoutAttribute.Right, multiplier: 1.0, constant: 10.0))
         
         self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.TopMargin, multiplier: 1.0, constant: 5.0))
         
         self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: imageView, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: 37.0))
         
         self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: imageView, attribute: NSLayoutAttribute.Height, multiplier: 1.0, constant: 37.0))
+
+        
+        // ----------------------------------------------------------------
+        //   role label
+        // ----------------------------------------------------------------
+        let labelForRole = UILabel(frame: CGRectMake(115.0, 7.0, viewframe.size.width - 130.0, 20.0))
+        labelForRole.textAlignment = NSTextAlignment.Left
+        labelForRole.textColor = UIColor(red: 234.0/255.0, green: 83.0/255.0, blue: 42.0/255.0, alpha: 1.0)
+        labelForRole.font = UIFont(name: AppConstants.RobotoLightFont, size: 14)
+        labelForRole.text = jobRole
+        labelForRole.backgroundColor = UIColor.blueColor()
+        viewForBackground.addSubview(labelForRole)
+        
+        labelForRole.translatesAutoresizingMaskIntoConstraints = false;
+        
+        // ----------------------------------------------------------------
+        //   constraints for role label
+        // ----------------------------------------------------------------
+        self.addConstraint(NSLayoutConstraint(item: labelForRole, attribute: NSLayoutAttribute.LeadingMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: 115.0))
+        
+        
+        self.addConstraint(NSLayoutConstraint(item: labelForRole, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.TopMargin, multiplier: 1.0, constant: 8.0))
+        
+        
+        self.addConstraint(NSLayoutConstraint(item: labelForRole, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: labelForRole, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: viewframe.size.width - 130.0))
+        
+        
+        self.addConstraint(NSLayoutConstraint(item: labelForRole, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: labelForRole, attribute: NSLayoutAttribute.Height, multiplier: 1.0, constant: 20.0))
+        
+        
+        // ----------------------------------------------------------------
+        //   company label
+        // ----------------------------------------------------------------
+        let labelForCompany = UILabel()
+        labelForCompany.textAlignment = NSTextAlignment.Left
+        labelForCompany.textColor = UIColor(red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, alpha: 1.0)
+        labelForCompany.font = UIFont(name: AppConstants.RobotoLightFont, size: 14)
+        labelForCompany.text = jobCompany
+        labelForCompany.backgroundColor = UIColor.purpleColor()
+        viewForBackground.addSubview(labelForCompany)
+        
+        labelForCompany.translatesAutoresizingMaskIntoConstraints = false;
+        
+        // ----------------------------------------------------------------
+        //   constraints for role label
+        // ----------------------------------------------------------------
+        self.addConstraint(NSLayoutConstraint(item: labelForCompany, attribute: NSLayoutAttribute.LeadingMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: 115.0))
+        
+        
+        self.addConstraint(NSLayoutConstraint(item: labelForCompany, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: labelForRole, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 4.0))
+        
+        
+        self.addConstraint(NSLayoutConstraint(item: labelForCompany, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: labelForCompany, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: viewframe.size.width - 130.0))
+        
+        
+        self.addConstraint(NSLayoutConstraint(item: labelForCompany, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: labelForCompany, attribute: NSLayoutAttribute.Height, multiplier: 1.0, constant: 20.0))
     }
 }

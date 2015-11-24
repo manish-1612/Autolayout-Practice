@@ -101,26 +101,41 @@ class PUJobListVC: UIViewController {
 
     
     func createViewForJobList(){
-        
-        print("button : \(buttonToAdd.frame)")
-        print("view : \(viewForSeparatorBelowButton.frame)")
-        
+                
         var arrayForOrigin = [CGFloat]()
         arrayForOrigin.append(buttonToAdd.frame.origin.y + buttonToAdd.frame.size.height + 22.0)
         
         for i in 0..<arrayForJobList.count{
             
-            
             let job = arrayForJobList[i]
             
             let viewForJob = PUJobView(frame: CGRectMake(0.0, arrayForOrigin[i], self.view.frame.size.width, 50.0), role: (job["role"] as? String)!, company: (job["name"] as? String)!, date: (job["doj"] as? String)!, image: (job["image"] as? UIImage)!)
-            viewForJob.backgroundColor = UIColor.whiteColor()
+            viewForJob.backgroundColor = UIColor.greenColor()
             scrollView.addSubview(viewForJob)
+            scrollView.bringSubviewToFront(viewForJob)
+
+            
+            viewForJob.translatesAutoresizingMaskIntoConstraints = false
+            
+            // ----------------------------------------------------------------
+            //   constraints for job view label
+            // ----------------------------------------------------------------
+            scrollView.addConstraint(NSLayoutConstraint(item: viewForJob, attribute: NSLayoutAttribute.LeadingMargin, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: 0.0))
+
+            scrollView.addConstraint(NSLayoutConstraint(item: viewForJob, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: arrayForOrigin[i]))
+            
+            self.view.addConstraint(NSLayoutConstraint(item: viewForJob, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: viewForJob, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: self.view.frame.size.width))
+            
+            self.view.addConstraint(NSLayoutConstraint(item: viewForJob, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: viewForJob, attribute: NSLayoutAttribute.Height, multiplier: 1.0, constant: 50.0))
+
+            if i == arrayForJobList.count - 1{
+                
+                scrollView.addConstraint(NSLayoutConstraint(item: viewForJob, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 33.0))
+                
+            }
             
             arrayForOrigin.append(viewForJob.frame.origin.y + viewForJob.frame.size.height + 33.0)
             
-            
-            scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, viewForJob.frame.origin.y + viewForJob.frame.size.height + 33.0)
         }
         
     }
