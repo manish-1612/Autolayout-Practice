@@ -326,7 +326,7 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FkX-H7-cU7">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FkX-H7-cU7">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRs-DR-C9G">
@@ -338,25 +338,28 @@ Cg
                                         </constraints>
                                         <state key="normal" image="plus_orange"/>
                                     </button>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ouu-me-oPv">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ouu-me-oPv">
                                         <rect key="frame" x="78" y="171" width="1" height="429"/>
                                         <color key="backgroundColor" red="0.91764705879999997" green="0.32549019610000002" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="nvl-0k-ktE"/>
+                                            <constraint firstAttribute="height" constant="429" id="vSh-6G-FOj"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Ouu-me-oPv" secondAttribute="bottom" id="56j-LR-nmf"/>
                                     <constraint firstItem="Ouu-me-oPv" firstAttribute="centerX" secondItem="ZRs-DR-C9G" secondAttribute="centerX" id="Db6-Sn-MPG"/>
                                     <constraint firstItem="ZRs-DR-C9G" firstAttribute="top" secondItem="FkX-H7-cU7" secondAttribute="top" constant="130" id="LWl-cK-tBr"/>
                                     <constraint firstItem="ZRs-DR-C9G" firstAttribute="leading" secondItem="FkX-H7-cU7" secondAttribute="leading" constant="58" id="PDG-BO-UzN"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ouu-me-oPv" secondAttribute="bottom" id="kYb-Gd-CPH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ouu-me-oPv" secondAttribute="trailing" constant="521" id="qiw-R0-F87"/>
                                     <constraint firstItem="Ouu-me-oPv" firstAttribute="top" secondItem="ZRs-DR-C9G" secondAttribute="bottom" constant="-1" id="qkV-Db-OSx"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="FkX-H7-cU7" secondAttribute="trailing" constant="-20" id="1UC-ip-EHW"/>
                             <constraint firstItem="FkX-H7-cU7" firstAttribute="top" secondItem="pLJ-sa-Ezf" secondAttribute="top" id="Jie-gV-jHA"/>
                             <constraint firstAttribute="trailing" secondItem="FkX-H7-cU7" secondAttribute="trailing" id="Pck-Fp-zkx"/>
                             <constraint firstItem="FkX-H7-cU7" firstAttribute="bottom" secondItem="CbI-Xq-GMb" secondAttribute="top" id="Yg9-Wk-9u5"/>
@@ -364,7 +367,9 @@ Cg
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraintForScrollviewContentHeight" destination="kYb-Gd-CPH" id="H03-AK-gyT"/>
                         <outlet property="buttonToAdd" destination="ZRs-DR-C9G" id="G74-Kb-Kag"/>
+                        <outlet property="horizontalConstraintForScrollviewContentWidth" destination="qiw-R0-F87" id="L6Q-bF-oR2"/>
                         <outlet property="scrollView" destination="FkX-H7-cU7" id="iWl-Ys-icQ"/>
                         <outlet property="viewForSeparatorBelowButton" destination="Ouu-me-oPv" id="Of6-wq-mcM"/>
                     </connections>

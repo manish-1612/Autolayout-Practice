@@ -101,7 +101,7 @@ class PUJobView: UIView {
         // ----------------------------------------------------------------
         //   constraints for imageview
         // ----------------------------------------------------------------
-        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: labelForYear, attribute: NSLayoutAttribute.Right, multiplier: 1.0, constant: 10.0))
+        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: labelForYear, attribute: NSLayoutAttribute.Left, multiplier: 1.0, constant: 10.0))
         
         self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.TopMargin, multiplier: 1.0, constant: 5.0))
         
