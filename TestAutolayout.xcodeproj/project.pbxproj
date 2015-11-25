@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7949DEB51C05EB6500FDB849 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7949DEB41C05EB6500FDB849 /* Utility.swift */; settings = {ASSET_TAGS = (); }; };
 		79F0F8321BFF07610054D7B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0F8311BFF07610054D7B3 /* AppDelegate.swift */; };
 		79F0F8341BFF07610054D7B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0F8331BFF07610054D7B3 /* ViewController.swift */; };
 		79F0F8371BFF07610054D7B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F0F8351BFF07610054D7B3 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7949DEB41C05EB6500FDB849 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		79F0F82E1BFF07610054D7B3 /* TestAutolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAutolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F0F8311BFF07610054D7B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F0F8331BFF07610054D7B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		79F0F8301BFF07610054D7B3 /* TestAutolayout */ = {
 			isa = PBXGroup;
 			children = (
+				7949DEB41C05EB6500FDB849 /* Utility.swift */,
 				79F8816A1C030B42006DB84A /* Fonts */,
 				79F8815A1C02FD0F006DB84A /* FlexibleHeightBar */,
 				79F881681C030A75006DB84A /* PUAppConstants.swift */,
@@ -332,6 +335,7 @@
 				79F881641C02FD0F006DB84A /* FlexibleHeightBarSubviewLayoutAttributes.swift in Sources */,
 				79F881721C031792006DB84A /* PUJobView.swift in Sources */,
 				79F881591C02FC10006DB84A /* PUJobListVC.swift in Sources */,
+				7949DEB51C05EB6500FDB849 /* Utility.swift in Sources */,
 				79F881691C030A75006DB84A /* PUAppConstants.swift in Sources */,
 				79F0F8321BFF07610054D7B3 /* AppDelegate.swift in Sources */,
 				79F0F8651BFF3BE50054D7B3 /* OptionsVC.swift in Sources */,

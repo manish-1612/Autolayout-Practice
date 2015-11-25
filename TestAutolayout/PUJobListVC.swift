@@ -39,12 +39,12 @@ class PUJobListVC: UIViewController {
         heightConstraintForViewForSeparator.constant = 1.0
         
         
-        let dictionaryForJob1 = ["name" : "Innofied Solutions Pvt. Ltd.", "role" : "Manager", "doj" : "Nov 2017", "image" : UIImage()]
-        let dictionaryForJob2 = ["name" : "FHCD Solution Ltd.", "role" : "Project Manager", "doj" : "Jun 2016", "image" : UIImage()]
-        let dictionaryForJob3 = ["name" : "My Apps Ltd.", "role" : "Team Leader", "doj" : "Jul 2015", "image" : UIImage()]
-        let dictionaryForJob4 = ["name" : "King Soft", "role" : "Software Engineer", "doj" : "Apr 2014", "image" : UIImage()]
-        let dictionaryForJob5 = ["name" : "ABC software Solution Pvt. Ltd.", "role" : "Junior Developer", "doj" : "Jan 2013", "image" : UIImage()]
-        let dictionaryForJob6 = ["name" : "Deel Software Solution", "role" : "Trainee", "doj" : "May 2012", "image" : UIImage()]
+        let dictionaryForJob1 = ["name" : "Innofied Solutions Pvt. Ltd.", "role" : "Manager", "doj" : "Nov 2017", "image" : Utility.getImageWithColor(UIColor.redColor(), size: CGSizeMake(37.0, 37.0))]
+        let dictionaryForJob2 = ["name" : "FHCD Solution Ltd.", "role" : "Project Manager", "doj" : "Jun 2016", "image" : Utility.getImageWithColor(UIColor.redColor(), size: CGSizeMake(37.0, 37.0))]
+        let dictionaryForJob3 = ["name" : "My Apps Ltd.", "role" : "Team Leader", "doj" : "Jul 2015", "image" : Utility.getImageWithColor(UIColor.redColor(), size: CGSizeMake(37.0, 37.0))]
+        let dictionaryForJob4 = ["name" : "King Soft", "role" : "Software Engineer", "doj" : "Apr 2014", "image" : Utility.getImageWithColor(UIColor.redColor(), size: CGSizeMake(37.0, 37.0))]
+        let dictionaryForJob5 = ["name" : "ABC software Solution Pvt. Ltd.", "role" : "Junior Developer", "doj" : "Jan 2013", "image" : Utility.getImageWithColor(UIColor.redColor(), size: CGSizeMake(37.0, 37.0))]
+        let dictionaryForJob6 = ["name" : "Deel Software Solution", "role" : "Trainee", "doj" : "May 2012", "image" : Utility.getImageWithColor(UIColor.redColor(), size: CGSizeMake(37.0, 37.0))]
 
         arrayForJobList.append(dictionaryForJob1)
         arrayForJobList.append(dictionaryForJob2)
@@ -68,9 +68,7 @@ class PUJobListVC: UIViewController {
         
     }
     
-    
-    
-    
+
     var myCustomBar: SquareCashFlexibleHeightBar {
         get {
             if let customBar = _myCustomBar {
@@ -114,42 +112,29 @@ class PUJobListVC: UIViewController {
             let job = arrayForJobList[i]
             
             let viewForJob = PUJobView(frame: CGRectMake(0.0, arrayForOrigin[i], self.view.frame.size.width, 50.0), role: (job["role"] as? String)!, company: (job["name"] as? String)!, date: (job["doj"] as? String)!, image: (job["image"] as? UIImage)!)
-            viewForJob.backgroundColor = UIColor.greenColor()
+            viewForJob.backgroundColor = UIColor.whiteColor()
             scrollView.addSubview(viewForJob)
             scrollView.bringSubviewToFront(viewForJob)
 
-            
-            viewForJob.translatesAutoresizingMaskIntoConstraints = false
-            
-            // ----------------------------------------------------------------
-            //   constraints for job view label
-            // ----------------------------------------------------------------
-            scrollView.addConstraint(NSLayoutConstraint(item: viewForJob, attribute: NSLayoutAttribute.LeadingMargin, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.LeadingMargin, multiplier: 1.0, constant: 0.0))
-
-            scrollView.addConstraint(NSLayoutConstraint(item: viewForJob, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: arrayForOrigin[i]))
-            
-            self.view.addConstraint(NSLayoutConstraint(item: viewForJob, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: viewForJob, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: self.view.frame.size.width))
-            
-            self.view.addConstraint(NSLayoutConstraint(item: viewForJob, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: viewForJob, attribute: NSLayoutAttribute.Height, multiplier: 1.0, constant: 50.0))
-            
             let heightToAppend = viewForJob.frame.origin.y + viewForJob.frame.size.height + 33.0
             
             arrayForOrigin.append(heightToAppend)
             
-            
             heightConstraintForViewForSeparator.constant = arrayForOrigin.last! - viewForSeparatorBelowButton.frame.origin.y
-            
         }
         
         bottomConstraintForScrollviewContentHeight.constant = 0.0
         
-    
         horizontalConstraintForScrollviewContentWidth.constant = self.view.frame.size.width - viewForSeparatorBelowButton.frame.origin.x - 10.0
         
         
-
-
+        if viewForSeparatorBelowButton.frame.origin.y + heightConstraintForViewForSeparator.constant < self.view.frame.size.height {
+            heightConstraintForViewForSeparator.constant = self.view.frame.size.height  - viewForSeparatorBelowButton.frame.origin.y
+        }
     }
+    
+    
+    
     
     override func viewWillAppear(animated: Bool) {
         //do as per your desire

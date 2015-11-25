@@ -39,10 +39,10 @@ class PUJobView: UIView {
         labelForMonth.textColor = UIColor(red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, alpha: 1.0)
         labelForMonth.font = UIFont(name: AppConstants.RobotoLightFont, size: 12)
         labelForMonth.text = doj.substringToIndex(3)
-        labelForMonth.backgroundColor = UIColor.redColor()
+        labelForMonth.backgroundColor = UIColor.clearColor()
         viewForBackground.addSubview(labelForMonth)
         
-        labelForMonth.translatesAutoresizingMaskIntoConstraints = false;
+        labelForMonth.translatesAutoresizingMaskIntoConstraints = false 
         
         // ----------------------------------------------------------------
         //   constraints for month label
@@ -65,12 +65,12 @@ class PUJobView: UIView {
         let labelForYear = UILabel()
         labelForYear.textAlignment = NSTextAlignment.Right
         labelForYear.textColor = UIColor(red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, alpha: 1.0)
-        labelForYear.backgroundColor = UIColor.yellowColor()
+        labelForYear.backgroundColor = UIColor.clearColor()
         labelForYear.font = UIFont(name: AppConstants.RobotoLightFont, size: 12)
         labelForYear.text = doj.substringFromIndex(4)
         viewForBackground.addSubview(labelForYear)
         
-        labelForYear.translatesAutoresizingMaskIntoConstraints = false;
+        labelForYear.translatesAutoresizingMaskIntoConstraints = false
         
         // ----------------------------------------------------------------
         //   constraints for year label
@@ -89,25 +89,26 @@ class PUJobView: UIView {
         // ----------------------------------------------------------------
         //   image for company
         // ----------------------------------------------------------------
-        let imageView = UIImageView(frame: CGRectMake(60.0, 6.0, 37.0, 37.0))
-        imageView.image = companyImage
-        imageView.backgroundColor = UIColor.greenColor()
-        imageView.layer.cornerRadius = 37.0 / 2.0
-        imageView.clipsToBounds = true
-        viewForBackground.addSubview(imageView)
+        let imageViewForCompanyImage = UIImageView()
+        imageViewForCompanyImage.image = companyImage
+        imageViewForCompanyImage.backgroundColor = UIColor.greenColor()
+        imageViewForCompanyImage.layer.cornerRadius = 37.0 / 2.0
+        imageViewForCompanyImage.clipsToBounds = true
+        imageViewForCompanyImage.contentMode = UIViewContentMode.ScaleAspectFit
+        viewForBackground.addSubview(imageViewForCompanyImage)
         
-        imageView.translatesAutoresizingMaskIntoConstraints = false;
+        imageViewForCompanyImage.translatesAutoresizingMaskIntoConstraints = false
 
         // ----------------------------------------------------------------
         //   constraints for imageview
         // ----------------------------------------------------------------
-        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: labelForYear, attribute: NSLayoutAttribute.Left, multiplier: 1.0, constant: 10.0))
+        self.addConstraint(NSLayoutConstraint(item: imageViewForCompanyImage, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: labelForYear, attribute: NSLayoutAttribute.Right, multiplier: 1.0, constant: 18.0))
+
+        self.addConstraint(NSLayoutConstraint(item: imageViewForCompanyImage, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.TopMargin, multiplier: 1.0, constant: 7.0))
+
+        self.addConstraint(NSLayoutConstraint(item: imageViewForCompanyImage, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: imageViewForCompanyImage, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: 37.0))
         
-        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: viewForBackground, attribute: NSLayoutAttribute.TopMargin, multiplier: 1.0, constant: 5.0))
-        
-        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: imageView, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: 37.0))
-        
-        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: imageView, attribute: NSLayoutAttribute.Height, multiplier: 1.0, constant: 37.0))
+        self.addConstraint(NSLayoutConstraint(item: imageViewForCompanyImage, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: imageViewForCompanyImage, attribute: NSLayoutAttribute.Height, multiplier: 1.0, constant: 37.0))
 
         
         // ----------------------------------------------------------------
@@ -118,10 +119,10 @@ class PUJobView: UIView {
         labelForRole.textColor = UIColor(red: 234.0/255.0, green: 83.0/255.0, blue: 42.0/255.0, alpha: 1.0)
         labelForRole.font = UIFont(name: AppConstants.RobotoLightFont, size: 14)
         labelForRole.text = jobRole
-        labelForRole.backgroundColor = UIColor.blueColor()
+        labelForRole.backgroundColor = UIColor.clearColor()
         viewForBackground.addSubview(labelForRole)
         
-        labelForRole.translatesAutoresizingMaskIntoConstraints = false;
+        labelForRole.translatesAutoresizingMaskIntoConstraints = false 
         
         // ----------------------------------------------------------------
         //   constraints for role label
@@ -146,10 +147,10 @@ class PUJobView: UIView {
         labelForCompany.textColor = UIColor(red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, alpha: 1.0)
         labelForCompany.font = UIFont(name: AppConstants.RobotoLightFont, size: 14)
         labelForCompany.text = jobCompany
-        labelForCompany.backgroundColor = UIColor.purpleColor()
+        labelForCompany.backgroundColor = UIColor.clearColor()
         viewForBackground.addSubview(labelForCompany)
         
-        labelForCompany.translatesAutoresizingMaskIntoConstraints = false;
+        labelForCompany.translatesAutoresizingMaskIntoConstraints = false
         
         // ----------------------------------------------------------------
         //   constraints for role label
