@@ -10,6 +10,7 @@ import UIKit
 
 class PUJobListVC: UIViewController {
     
+    @IBOutlet weak var heightConstraintForViewForSeparator: NSLayoutConstraint!
     @IBOutlet weak var horizontalConstraintForScrollviewContentWidth: NSLayoutConstraint!
     @IBOutlet weak var bottomConstraintForScrollviewContentHeight: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -33,6 +34,9 @@ class PUJobListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        heightConstraintForViewForSeparator.constant = 1.0
         
         
         let dictionaryForJob1 = ["name" : "Innofied Solutions Pvt. Ltd.", "role" : "Manager", "doj" : "Nov 2017", "image" : UIImage()]
@@ -131,18 +135,20 @@ class PUJobListVC: UIViewController {
             let heightToAppend = viewForJob.frame.origin.y + viewForJob.frame.size.height + 33.0
             
             arrayForOrigin.append(heightToAppend)
-
+            
+            
+            heightConstraintForViewForSeparator.constant = arrayForOrigin.last! - viewForSeparatorBelowButton.frame.origin.y
+            
         }
         
+        bottomConstraintForScrollviewContentHeight.constant = 0.0
         
-        bottomConstraintForScrollviewContentHeight.constant = arrayForOrigin.last! - (viewForSeparatorBelowButton.frame.origin.y + viewForSeparatorBelowButton.frame.size.height)
-
-        print("height to append : \(arrayForOrigin.last) && bottomConstraintForScrollviewContentHeight : \(bottomConstraintForScrollviewContentHeight.constant)")
-
-        
-        horizontalConstraintForScrollviewContentWidth.constant = self.view.frame.size.width - viewForSeparatorBelowButton.frame.origin.x - 10.0
     
+        horizontalConstraintForScrollviewContentWidth.constant = self.view.frame.size.width - viewForSeparatorBelowButton.frame.origin.x - 10.0
         
+        
+
+
     }
     
     override func viewWillAppear(animated: Bool) {

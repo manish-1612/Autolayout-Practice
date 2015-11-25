@@ -369,6 +369,7 @@ Cg
                     <connections>
                         <outlet property="bottomConstraintForScrollviewContentHeight" destination="kYb-Gd-CPH" id="H03-AK-gyT"/>
                         <outlet property="buttonToAdd" destination="ZRs-DR-C9G" id="G74-Kb-Kag"/>
+                        <outlet property="heightConstraintForViewForSeparator" destination="vSh-6G-FOj" id="ERP-dW-H3v"/>
                         <outlet property="horizontalConstraintForScrollviewContentWidth" destination="qiw-R0-F87" id="L6Q-bF-oR2"/>
                         <outlet property="scrollView" destination="FkX-H7-cU7" id="iWl-Ys-icQ"/>
                         <outlet property="viewForSeparatorBelowButton" destination="Ouu-me-oPv" id="Of6-wq-mcM"/>
