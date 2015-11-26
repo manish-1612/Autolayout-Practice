@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2dE-Oe-5aK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vpP-dc-yFZ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -378,6 +379,48 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OME-Eg-aYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="868" y="154"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0nu-wo-JdO">
+            <objects>
+                <viewController id="vpP-dc-yFZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rpg-4H-acZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ihb-gN-Mcx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tO7-Wo-7lF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4hS-7A-YZ4">
+                                <rect key="frame" x="20" y="20" width="112" height="112"/>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.62745098040000002" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4hS-7A-YZ4" secondAttribute="height" multiplier="1:1" id="D9d-Pe-gV8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C7f-PG-BjG">
+                                <rect key="frame" x="152" y="20" width="112" height="112"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.36078431370000003" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C7f-PG-BjG" secondAttribute="height" multiplier="1:1" id="Acb-SN-vq4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C7f-PG-BjG" firstAttribute="width" secondItem="4hS-7A-YZ4" secondAttribute="width" id="29L-B6-NIb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="4hS-7A-YZ4" secondAttribute="leading" id="HDi-z3-RpE"/>
+                            <constraint firstItem="4hS-7A-YZ4" firstAttribute="top" secondItem="Rpg-4H-acZ" secondAttribute="bottom" constant="20" id="VgZ-li-96I"/>
+                            <constraint firstItem="C7f-PG-BjG" firstAttribute="top" secondItem="Rpg-4H-acZ" secondAttribute="bottom" constant="20" id="Xll-iz-10p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C7f-PG-BjG" secondAttribute="trailing" id="aj4-P0-Htw"/>
+                            <constraint firstItem="C7f-PG-BjG" firstAttribute="leading" secondItem="4hS-7A-YZ4" secondAttribute="trailing" constant="20" id="qAK-83-p6d"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oeM-jO-2m0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698" y="122"/>
         </scene>
     </scenes>
     <resources>
